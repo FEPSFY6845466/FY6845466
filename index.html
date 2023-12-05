@@ -229,6 +229,93 @@
 <p style="font-family:Times New Roman;font-size:20px;text-align:justify;margin-left:150px;margin-right:150px;" id="Yalcin and de la Monte, 2016">Yalcin, E. and de la Monte, S. (2016). Tobacco Nitrosamines as Culprits in disease: Mechanisms Reviewed. Journal of Physiology and Biochemistry, [online] 72(1), Page 110. Available at: <a style="color:blue;" href="https://link.springer.com/content/pdf/10.1007/s13105-016-0465-9.pdf">https://link.springer.com/content/pdf/10.1007/s13105-016-0465-9.pdf </a>[Accessed 7 Nov. 2023]. </p>
 
 </p>
+
+<script> type="text/javascript" src=https://www.gstatic.com/charts/loader.js></script>
+      <script type="text/javascript">
+        google.charts.load('current', {'packages' : ['corechart'] });
+        goggle.charts.setOnLoadCallback(drawChart)
+      </script>
+      <div id="chart_div"></div>
+
+
+    <h2>Conference paper: Expolring the achievements and trials of the Iron Dome</h2>
+    
+    <script>
+      // Array of slide image URLs
+      var slideImages = ["Slide1.png", "Slide2.png", "Slide3.png","Slide.png","Slide5.png"];
+      var currentSlide = 0;
+
+
+      function showSlide() {
+        document.getElementById('Slide').src = slideImages[currentSlide];
+      }
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slideImages.length;
+        showSlide();
+      }
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+        showSlide();
+      }
+      // Function to show a specific slide based on the button clicked
+      function showSlideNumber(slideNumber) {
+        currentSlide = slideNumber - 1;
+        showSlide();
+      }
+    </script>
+    
+    <div id="slide-container">
+      <img id="screen" src="screen1.png" alt=" Slide 1" style="width:100%; max-width:1400px;">
+      
+      <!-- Previous and Next buttons container -->
+     <div class="button-container">
+       <button class="button" onclick="prevSlide()">Previous</button>
+       <button class="button" onclick="nextSlide()">Next</button>
+    </div>
+      <!-- Slide number buttons container -->
+    <div class="slide-number-container">
+       <button class="button" onclick="showSlideNumber(1)">1</button>
+       <button class="button" onclick="showSlideNumber(2)">2</button>
+       <button class="button" onclick="showSlideNumber(3)">3</button>
+       <button class="button" onclick="showSlideNumber(4)">4</button>
+       <button class="button" onclick="showSlideNumber(5)">5</button>
+    </div>
+    <script>
+      // Call showSlide() to display the first slide
+      showSlide();
+    </script>
+    <style>
+      /* Style to center the image */
+      #slide-container {
+       text-align: center;
+       position: relative;
+      }
+      /* Style for the button */
+      .button-container {
+       position: absolute;
+       bottom: 0;
+       left: 50%;
+       transform: translateX(-50%);
+       margin-bottom: -100%px; /* Add some margin between the image and the buttons */
+      }
+      .button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 0 5px; /* Add some margin between the buttons */
+      }
+      .slide-number-container {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: -50px; /* Add some margin between the slide number of buttons and the image */
+      }
+     </style>
      
 </html>
 
